@@ -1,0 +1,102 @@
+.board {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+.cell {
+  border: 3px solid #043063;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* padding: 15px; */
+}
+.one {
+  border-top: none;
+  border-left: none;
+}
+.two {
+  border-top: none;
+}
+.three {
+  border-top: none;
+  border-right: none;
+}
+.four {
+  border-left: none;
+}
+/* .five {
+} */
+.six {
+  border-right: none;
+}
+.seven {
+  border-bottom: none;
+  border-left: none;
+}
+.eight {
+  border-bottom: none;
+}
+.nine {
+  border-right: none;
+  border-bottom: none;
+}
+.cell.x::before,
+.cell.x::after {
+  content: '';
+  position: absolute;
+
+  width: 13px;
+  height: 100px;
+  background-color: black;
+}
+.cell.x::before {
+  transform: rotate(45deg);
+}
+.cell.x::after {
+  transform: rotate(-45deg);
+}
+
+/* .cell.o::before, */
+.cell.o::after {
+  content: '';
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+  background-color: white;
+}
+/* .cell.o::before {
+} */
+.cell.o::after {
+  border-radius: 50%;
+  border: 13px solid black;
+}
+.cell.o,
+.cell.x {
+  cursor: not-allowed;
+}
+h1 {
+  text-align: center;
+  color: #010f12;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.75rem;
+}
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  display: block;
+  background: linear-gradient(#022c34, #010f12);
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  margin: auto;
+}
